@@ -16,6 +16,9 @@ const navToolsList = document.querySelectorAll(".sub_navList_tools")[0];
 
 // For About
 downAbtBtn.addEventListener("click", () => {
+  navAcctList.classList.remove("active");
+  upAcctBtn.style.display = "none";
+  downAcctBtn.style.display = "flex";
   navAbtList.classList.toggle("active");
   downAbtBtn.style.display = "none";
   upAbtBtn.style.display = "flex";
@@ -29,6 +32,12 @@ upAbtBtn.addEventListener("click", () => {
 
 // For Account
 downAcctBtn.addEventListener("click", () => {
+  navAbtList.classList.remove("active");
+  upAbtBtn.style.display = "none";
+  downAbtBtn.style.display = "flex";
+  navPlatList.classList.remove("active");
+  upPlatBtn.style.display = "none";
+  downPlatBtn.style.display = "flex";
   navAcctList.classList.toggle("active");
   downAcctBtn.style.display = "none";
   upAcctBtn.style.display = "flex";
@@ -42,6 +51,12 @@ upAcctBtn.addEventListener("click", () => {
 
 // For Platform
 downPlatBtn.addEventListener("click", () => {
+  navAcctList.classList.remove("active");
+  upAcctBtn.style.display = "none";
+  downAcctBtn.style.display = "flex";
+  navToolsList.classList.remove("active");
+  upToolsBtn.style.display = "none";
+  downToolsBtn.style.display = "flex";
   navPlatList.classList.toggle("active");
   downPlatBtn.style.display = "none";
   upPlatBtn.style.display = "flex";
@@ -55,6 +70,9 @@ upPlatBtn.addEventListener("click", () => {
 
 // For Tools
 downToolsBtn.addEventListener("click", () => {
+  navPlatList.classList.remove("active");
+  upPlatBtn.style.display = "none";
+  downPlatBtn.style.display = "flex";
   navToolsList.classList.toggle("active");
   downToolsBtn.style.display = "none";
   upToolsBtn.style.display = "flex";
