@@ -7,6 +7,8 @@
   --main-theme: #ffcf01;
   --main-theme-hover: #ffcf51;
   --theme-dark: #0f171c;
+  --theme-mid-dark: #363d42;
+  --theme-lighter-gray: #8d9194;
   --theme-dark-hover: #0f171c88;
   --theme-light: #fff;
   --theme-gray: #f4f5f6;
@@ -454,3 +456,88 @@ nav .navCTA i:last-child {
 }
 /* xxxWITHDRWAL SECTION MEDIA QUERIES */
 /* WITHDRAWALE SECTION */
+
+/* EXECUTION SECTION STYLING */
+.exe_transparent {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.exe_transparent .execution {
+  padding: 5rem 5rem 1rem 5rem;
+  width: 100%;
+  height: 100%;
+  background-color: var(--theme-dark);
+}
+
+.exe_transparent .transparent {
+  padding: 5rem 5rem 1rem 5rem;
+  width: 100%;
+  height: 100%;
+  background-color: var(--theme-lighter-gray);
+}
+
+.exe_transparent .execution h3,
+.exe_transparent .transparent h3 {
+  font-size: 27px;
+  margin-bottom: 1.7rem;
+  color: var(--theme-gray);
+}
+
+.exe_transparent .execution p,
+.exe_transparent .transparent p {
+  color: var(--theme-gray);
+  font-size: 18.35px;
+  margin-bottom: 3rem;
+}
+
+.exe_transparent .execution .link,
+.exe_transparent .transparent .link {
+  font-size: 16px;
+  text-decoration: underline;
+}
+
+/* EXECUTION SECTION MEDIA QUERIES */
+@media (min-width: 200px) and (max-width: 374px) {
+}
+@media (min-width: 375px) and (max-width: 576px) {
+  .exe_transparent {
+    width: 100%;
+    height: 25vh;
+  }
+  .exe_transparent .execution,
+  .exe_transparent .transparent {
+    padding: 1rem 1rem 0.3rem 1rem;
+  }
+  .exe_transparent .execution h3,
+  .exe_transparent .transparent h3 {
+    font-size: 20px;
+    margin-bottom: 2rem;
+  }
+  .exe_transparent .execution p,
+  .exe_transparent .transparent p {
+    color: var(--theme-gray);
+    font-size: 16px;
+    margin-bottom: 1.5rem;
+  }
+
+  .exe_transparent .execution p {
+    margin-bottom: 2.9rem;
+  }
+  .exe_transparent .execution .link,
+  .exe_transparent .transparent .link {
+    font-size: 14px;
+  }
+}
+@media (min-width: 577px) and (max-width: 820px) {
+  .exe_transparent {
+    height: 30vh;
+  }
+  .exe_transparent .execution p {
+    margin-bottom: 4.5rem;
+  }
+}
+/* xxxEXECUTION SECTION MEDIA QUERIES */
+/* EXECUTION SECTION STYLING */
