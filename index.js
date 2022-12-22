@@ -1,25 +1,67 @@
-(function ($) {
-  // Begin jQuery
-  $(function () {
-    // DOM ready
-    // If a link has a dropdown, add sub menu toggle.
-    $("nav ul li a:not(:only-child)").click(function (e) {
-      $(this).siblings(".nav-dropdown").toggle();
-      // Close one dropdown when selecting another
-      $(".nav-dropdown").not($(this).siblings()).hide();
-      e.stopPropagation();
-    });
-    // Clicking away from dropdown will remove the dropdown class
-    $("html").click(function () {
-      $(".nav-dropdown").hide();
-    });
-    // Toggle open and close nav styles on click
-    $("#nav-toggle").click(function () {
-      $("nav ul").slideToggle();
-    });
-    // Hamburger to X toggle
-    $("#nav-toggle").on("click", function () {
-      this.classList.toggle("active");
-    });
-  }); // end DOM ready
-})(jQuery); // end jQuery
+const upAbtBtn = document.querySelectorAll(".abt_btn_up")[0];
+const downAbtBtn = document.querySelectorAll(".abt_btn_down")[0];
+const navAbtList = document.querySelectorAll(".sub_navList_abt")[0];
+
+const upAcctBtn = document.querySelectorAll(".acct_btn_up")[0];
+const downAcctBtn = document.querySelectorAll(".acct_btn_down")[0];
+const navAcctList = document.querySelectorAll(".sub_navList_acct")[0];
+
+const upPlatBtn = document.querySelectorAll(".plat_btn_up")[0];
+const downPlatBtn = document.querySelectorAll(".plat_btn_down")[0];
+const navPlatList = document.querySelectorAll(".sub_navList_plat")[0];
+
+const upToolsBtn = document.querySelectorAll(".tools_btn_up")[0];
+const downToolsBtn = document.querySelectorAll(".tools_btn_down")[0];
+const navToolsList = document.querySelectorAll(".sub_navList_tools")[0];
+
+// For About
+downAbtBtn.addEventListener("click", () => {
+  navAbtList.classList.toggle("active");
+  downAbtBtn.style.display = "none";
+  upAbtBtn.style.display = "flex";
+});
+
+upAbtBtn.addEventListener("click", () => {
+  navAbtList.classList.remove("active");
+  upAbtBtn.style.display = "none";
+  downAbtBtn.style.display = "flex";
+});
+
+// For Account
+downAcctBtn.addEventListener("click", () => {
+  navAcctList.classList.toggle("active");
+  downAcctBtn.style.display = "none";
+  upAcctBtn.style.display = "flex";
+});
+
+upAcctBtn.addEventListener("click", () => {
+  navAcctList.classList.remove("active");
+  upAcctBtn.style.display = "none";
+  downAcctBtn.style.display = "flex";
+});
+
+// For Platform
+downPlatBtn.addEventListener("click", () => {
+  navPlatList.classList.toggle("active");
+  downPlatBtn.style.display = "none";
+  upPlatBtn.style.display = "flex";
+});
+
+upPlatBtn.addEventListener("click", () => {
+  navPlatList.classList.remove("active");
+  upPlatBtn.style.display = "none";
+  downPlatBtn.style.display = "flex";
+});
+
+// For Tools
+downToolsBtn.addEventListener("click", () => {
+  navToolsList.classList.toggle("active");
+  downToolsBtn.style.display = "none";
+  upToolsBtn.style.display = "flex";
+});
+
+upToolsBtn.addEventListener("click", () => {
+  navToolsList.classList.remove("active");
+  upToolsBtn.style.display = "none";
+  downToolsBtn.style.display = "flex";
+});

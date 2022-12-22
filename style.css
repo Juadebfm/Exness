@@ -7,10 +7,37 @@
   --main-theme: #ffcf01;
   --main-theme-hover: #ffcf51;
   --theme-dark: #0f171c;
+  --theme-dark-hover: #0f171c88;
   --theme-light: #fff;
   --theme-gray: #f4f5f6;
 }
 /* CSS Variables */
+
+/* Initializing CSS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+/* Initializing CSS */
 
 /* Global CSS */
 .priBtn {
@@ -48,34 +75,46 @@
 }
 /* Global CSS */
 
-/* Initializing CSS */
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Open Sans", sans-serif;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-button {
-  border: none;
-  outline: none;
-}
-/* Initializing CSS */
-
-.navList .main_navList li .sub_navList {
+.navList .main_navList li .sub_navList_abt,
+.navList .main_navList li .sub_navList_acct,
+.navList .main_navList li .sub_navList_plat,
+.navList .main_navList li .sub_navList_tools {
   display: none;
+}
+
+.navList .main_navList li .sub_navList_abt.active,
+.navList .main_navList li .sub_navList_acct.active,
+.navList .main_navList li .sub_navList_plat.active,
+.navList .main_navList li .sub_navList_tools.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 1.7rem;
+  cursor: pointer;
+  position: absolute;
+  background-color: #363d42;
+  top: 11%;
+}
+
+.navList .main_navList li .sub_navList_abt.active ul .topic {
+  font-weight: 700;
+  padding-bottom: 0.8rem;
+}
+
+.navList .main_navList li .sub_navList_abt.active ul li {
+  margin-bottom: 1.8rem;
+}
+
+.navList .main_navList li .sub_navList_abt.active ul li:last-child {
+  margin-bottom: 0;
+}
+
+.navList .main_navList li .sub_navList_abt.active:hover,
+.navList .main_navList li .sub_navList_acct.active:hover,
+.navList .main_navList li .sub_navList_plat.active:hover,
+.navList .main_navList li .sub_navList_tools.active:hover {
+  color: var(--theme-gray);
 }
 
 nav {
@@ -107,17 +146,40 @@ nav .navList .main_navList {
   font-size: 15px;
 }
 
+.navList .main_navList li {
+  transition: 0.2s ease;
+}
+
 .navList .main_navList li a {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.2s ease;
+}
+
+.navList .main_navList > li:last-of-type:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.navList .main_navList li:hover,
+.navList .main_navList li:hover a {
+  color: var(--main-theme);
+}
+
+.navList .main_navList li:hover .sub_navList_abt,
+.navList .main_navList li:hover .sub_navList_acct,
+.navList .main_navList li:hover .sub_navList_plat,
+.navList .main_navList li:hover .sub_navList_tools {
+  color: var(--theme-gray);
 }
 
 .navList .main_navList li a .bx-chevron-up {
   display: none;
 }
 
-.navList .main_navList li a .bx-chevron-down {
+.navList .main_navList li a .bx-chevron-down,
+.navList .main_navList li a .bx-chevron-up {
   font-size: 24px;
 }
 
