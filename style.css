@@ -1,0 +1,34 @@
+/* LINKING GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+/* LINKING GOOGLE FONTS */
+
+/* CSS Variables */
+:root {
+  --main-theme: #ffcf01;
+  --theme-dark: #0f171c;
+  --theme-light: #fff;
+  --theme-gray: #f4f5f6;
+}
+/* CSS Variables */
+
+/* Initializing CSS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+/* Initializing CSS */
