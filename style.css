@@ -1,21 +1,62 @@
 /* LINKING GOOGLE FONTS */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 /* LINKING GOOGLE FONTS */
 
 /* CSS Variables */
 :root {
   --main-theme: #ffcf01;
+  --main-theme-hover: #ffcf51;
   --theme-dark: #0f171c;
   --theme-light: #fff;
   --theme-gray: #f4f5f6;
 }
 /* CSS Variables */
 
+/* Global CSS */
+.priBtn {
+  background-color: var(--main-theme);
+  padding: 0.7rem 1.3rem;
+  margin-right: 1rem;
+  border-radius: 6px;
+  font-size: 15.1px;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  font-weight: 600;
+}
+
+.priBtn:hover {
+  background-color: var(--main-theme-hover);
+}
+
+.secBtn {
+  background-color: transparent;
+  color: var(--main-theme);
+  border: 1px solid var(--main-theme);
+  padding: 0.7rem 2.6rem;
+  margin-right: 1rem;
+  border-radius: 6px;
+  font-size: 15.1px;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  font-weight: 600;
+}
+
+.secBtn:hover {
+  box-shadow: 0px 0px 10px var(--main-theme);
+}
+/* Global CSS */
+
 /* Initializing CSS */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
 }
 
 li {
@@ -32,3 +73,64 @@ button {
   outline: none;
 }
 /* Initializing CSS */
+
+.navList .main_navList li .sub_navList {
+  display: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.8rem;
+  background-color: var(--theme-dark);
+  color: var(--theme-gray);
+}
+
+nav > .navLogo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+nav > .navLogo img:nth-child(2) {
+  height: 45px;
+  width: 50px;
+}
+
+nav .navList .main_navList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  font-size: 15px;
+}
+
+.navList .main_navList li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navList .main_navList li a .bx-chevron-up {
+  display: none;
+}
+
+.navList .main_navList li a .bx-chevron-down {
+  font-size: 24px;
+}
+
+nav .navCTA {
+  cursor: pointer;
+}
+
+nav .navCTA {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav .navCTA i {
+  font-size: 24px;
+}
